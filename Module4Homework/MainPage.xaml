@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module4Homework.MainPage">
+
+    <StackLayout Margin="1,35,25,20"
+                 Orientation="Vertical">
+        <Label
+            BindingContext="{x:Reference Name=iceman}"
+            Text="This is a title"
+            Rotation="{Binding Path=Value}"
+            FontAttributes="Bold"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"/>
+
+        <Slider x:Name="iceman"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand"/>
+
+        <Entry
+            x:Name="picker"
+            Placeholder="Enter "
+            VerticalOptions="CenterAndExpand"
+            Keyboard="Numeric"
+            MaxLength="3"
+            Margin="20,20,20,20"
+            HorizontalOptions="Center"/>
+
+        <Editor Placeholder="Editor"
+            TextChanged="OnTextChanged"
+            Completed="OnTextCompleted"
+            VerticalOptions="Center"
+            PlaceholderColor="Blue"
+            AutoSize="TextChanges"/>
+
+        <Button Text="Click Me"
+            Clicked="OnButtonClicked"
+            TextColor="Blue"
+            BackgroundColor="Aqua"
+            BorderColor="Red"
+            BorderWidth="5"
+            CornerRadius="5"
+            WidthRequest="150"
+            HeightRequest="75"/>
+               
+    </StackLayout>
+
+</ContentPage>
